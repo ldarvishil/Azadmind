@@ -5,15 +5,1242 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>سیاست حریم خصوصی | آکادمی ذهن آزاد</title>
   <meta name="description" content="سیاست‌های حفظ حریم شخصی و اطلاعات کاربران در آکادمی ذهن آزاد">
-  <!-- Tailwind CSS CDN -->
-  <!-- HeroUI Pure CSS Framework -->
-  <link rel="stylesheet" href="css/heroui.css">
-  <link rel="stylesheet" href="css/style.css">
+  
+  <!-- Embedded CSS (HeroUI + Custom Styles) -->
+  <style>
+/**
+ * HeroUI - Pure CSS Framework Components
+ * A lightweight, dependency-free CSS framework for modern UI components
+ * Version: 1.0.0
+ */
+
+/* ============================================
+   CSS Variables & Theme Configuration
+   ============================================ */
+:root {
+  /* Primary Colors */
+  --hui-primary: #4f46e5;
+  --hui-primary-hover: #4338ca;
+  --hui-primary-light: #eef2ff;
+  
+  /* Secondary Colors */
+  --hui-secondary: #64748b;
+  --hui-secondary-hover: #475569;
+  --hui-secondary-light: #f1f5f9;
+  
+  /* Accent Colors */
+  --hui-accent: #8b5cf6;
+  --hui-accent-hover: #7c3aed;
+  --hui-accent-light: #f5f3ff;
+  
+  /* Success Colors */
+  --hui-success: #10b981;
+  --hui-success-hover: #059669;
+  --hui-success-light: #ecfdf5;
+  
+  /* Warning Colors */
+  --hui-warning: #f59e0b;
+  --hui-warning-hover: #d97706;
+  --hui-warning-light: #fffbeb;
+  
+  /* Danger Colors */
+  --hui-danger: #ef4444;
+  --hui-danger-hover: #dc2626;
+  --hui-danger-light: #fef2f2;
+  
+  /* Neutral Colors */
+  --hui-slate-50: #f8fafc;
+  --hui-slate-100: #f1f5f9;
+  --hui-slate-200: #e2e8f0;
+  --hui-slate-300: #cbd5e1;
+  --hui-slate-400: #94a3b8;
+  --hui-slate-500: #64748b;
+  --hui-slate-600: #475569;
+  --hui-slate-700: #334155;
+  --hui-slate-800: #1e293b;
+  --hui-slate-900: #0f172a;
+  --hui-slate-950: #020617;
+  
+  /* Dark Mode Colors */
+  --hui-dark-bg: #0f172a;
+  --hui-dark-surface: #1e293b;
+  --hui-dark-border: #334155;
+  
+  /* Typography */
+  --hui-font-family: 'Vazirmatn', -apple-system, BlinkMacSystemFont, sans-serif;
+  --hui-font-size-xs: 0.75rem;
+  --hui-font-size-sm: 0.875rem;
+  --hui-font-size-base: 1rem;
+  --hui-font-size-lg: 1.125rem;
+  --hui-font-size-xl: 1.25rem;
+  --hui-font-size-2xl: 1.5rem;
+  --hui-font-size-3xl: 1.875rem;
+  
+  /* Spacing */
+  --hui-spacing-xs: 0.25rem;
+  --hui-spacing-sm: 0.5rem;
+  --hui-spacing-md: 1rem;
+  --hui-spacing-lg: 1.5rem;
+  --hui-spacing-xl: 2rem;
+  
+  /* Border Radius */
+  --hui-radius-sm: 0.25rem;
+  --hui-radius-md: 0.375rem;
+  --hui-radius-lg: 0.5rem;
+  --hui-radius-xl: 0.75rem;
+  --hui-radius-2xl: 1rem;
+  --hui-radius-full: 9999px;
+  
+  /* Shadows */
+  --hui-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --hui-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --hui-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --hui-shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  
+  /* Transitions */
+  --hui-transition: all 0.2s ease-in-out;
+  --hui-transition-slow: all 0.3s ease-in-out;
+}
+
+/* Dark Mode Variables */
+.dark {
+  --hui-primary: #6366f1;
+  --hui-primary-hover: #818cf8;
+  --hui-primary-light: #1e1b4b;
+  
+  --hui-secondary: #94a3b8;
+  --hui-secondary-hover: #cbd5e1;
+  --hui-secondary-light: #1e293b;
+  
+  --hui-accent: #a78bfa;
+  --hui-accent-hover: #c4b5fd;
+  --hui-accent-light: #2e1065;
+  
+  --hui-success: #34d399;
+  --hui-success-hover: #6ee7b7;
+  --hui-success-light: #064e3b;
+  
+  --hui-warning: #fbbf24;
+  --hui-warning-hover: #fcd34d;
+  --hui-warning-light: #451a03;
+  
+  --hui-danger: #f87171;
+  --hui-danger-hover: #fca5a5;
+  --hui-danger-light: #450a0a;
+  
+  --hui-slate-50: #0f172a;
+  --hui-slate-100: #1e293b;
+  --hui-slate-200: #334155;
+  --hui-slate-300: #475569;
+  --hui-slate-400: #64748b;
+  --hui-slate-500: #94a3b8;
+  --hui-slate-600: #cbd5e1;
+  --hui-slate-700: #e2e8f0;
+  --hui-slate-800: #f1f5f9;
+  --hui-slate-900: #f8fafc;
+}
+
+/* ============================================
+   Base Styles & Reset
+   ============================================ */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--hui-font-family);
+  background-color: var(--hui-slate-50);
+  color: var(--hui-slate-800);
+  direction: rtl;
+}
+
+/* ============================================
+   Buttons
+   ============================================ */
+.hui-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--hui-spacing-sm);
+  padding: var(--hui-spacing-sm) var(--hui-spacing-md);
+  font-family: var(--hui-font-family);
+  font-size: var(--hui-font-size-sm);
+  font-weight: 600;
+  line-height: 1.5;
+  text-decoration: none;
+  border: none;
+  border-radius: var(--hui-radius-md);
+  cursor: pointer;
+  transition: var(--hui-transition);
+  white-space: nowrap;
+}
+
+.hui-btn:focus {
+  outline: 2px solid var(--hui-primary);
+  outline-offset: 2px;
+}
+
+.hui-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Button Sizes */
+.hui-btn--xs {
+  padding: var(--hui-spacing-xs) var(--hui-spacing-sm);
+  font-size: var(--hui-font-size-xs);
+}
+
+.hui-btn--sm {
+  padding: var(--hui-spacing-sm) var(--hui-spacing-md);
+  font-size: var(--hui-font-size-xs);
+}
+
+.hui-btn--md {
+  padding: var(--hui-spacing-sm) var(--hui-spacing-lg);
+  font-size: var(--hui-font-size-sm);
+}
+
+.hui-btn--lg {
+  padding: var(--hui-spacing-md) var(--hui-spacing-xl);
+  font-size: var(--hui-font-size-base);
+}
+
+.hui-btn--xl {
+  padding: var(--hui-spacing-lg) var(--hui-spacing-xl);
+  font-size: var(--hui-font-size-lg);
+}
+
+/* Button Variants */
+.hui-btn--primary {
+  background-color: var(--hui-primary);
+  color: white;
+}
+
+.hui-btn--primary:hover:not(:disabled) {
+  background-color: var(--hui-primary-hover);
+}
+
+.hui-btn--secondary {
+  background-color: var(--hui-secondary);
+  color: white;
+}
+
+.hui-btn--secondary:hover:not(:disabled) {
+  background-color: var(--hui-secondary-hover);
+}
+
+.hui-btn--accent {
+  background-color: var(--hui-accent);
+  color: white;
+}
+
+.hui-btn--accent:hover:not(:disabled) {
+  background-color: var(--hui-accent-hover);
+}
+
+.hui-btn--success {
+  background-color: var(--hui-success);
+  color: white;
+}
+
+.hui-btn--success:hover:not(:disabled) {
+  background-color: var(--hui-success-hover);
+}
+
+.hui-btn--warning {
+  background-color: var(--hui-warning);
+  color: white;
+}
+
+.hui-btn--warning:hover:not(:disabled) {
+  background-color: var(--hui-warning-hover);
+}
+
+.hui-btn--danger {
+  background-color: var(--hui-danger);
+  color: white;
+}
+
+.hui-btn--danger:hover:not(:disabled) {
+  background-color: var(--hui-danger-hover);
+}
+
+.hui-btn--outline {
+  background-color: transparent;
+  border: 2px solid var(--hui-primary);
+  color: var(--hui-primary);
+}
+
+.hui-btn--outline:hover:not(:disabled) {
+  background-color: var(--hui-primary);
+  color: white;
+}
+
+.hui-btn--ghost {
+  background-color: transparent;
+  color: var(--hui-primary);
+}
+
+.hui-btn--ghost:hover:not(:disabled) {
+  background-color: var(--hui-primary-light);
+}
+
+/* Button Full Width */
+.hui-btn--full {
+  width: 100%;
+}
+
+/* ============================================
+   Badges
+   ============================================ */
+.hui-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--hui-spacing-xs) var(--hui-spacing-sm);
+  font-family: var(--hui-font-family);
+  font-size: var(--hui-font-size-xs);
+  font-weight: 600;
+  line-height: 1;
+  border-radius: var(--hui-radius-full);
+  white-space: nowrap;
+}
+
+.hui-badge--default {
+  background-color: var(--hui-slate-100);
+  color: var(--hui-slate-700);
+}
+
+.hui-badge--primary {
+  background-color: var(--hui-primary-light);
+  color: var(--hui-primary);
+}
+
+.hui-badge--secondary {
+  background-color: var(--hui-secondary-light);
+  color: var(--hui-secondary);
+}
+
+.hui-badge--accent {
+  background-color: var(--hui-accent-light);
+  color: var(--hui-accent);
+}
+
+.hui-badge--success {
+  background-color: var(--hui-success-light);
+  color: var(--hui-success);
+}
+
+.hui-badge--warning {
+  background-color: var(--hui-warning-light);
+  color: var(--hui-warning);
+}
+
+.hui-badge--danger {
+  background-color: var(--hui-danger-light);
+  color: var(--hui-danger);
+}
+
+/* ============================================
+   Chips
+   ============================================ */
+.hui-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--hui-spacing-xs);
+  padding: var(--hui-spacing-xs) var(--hui-spacing-sm);
+  font-family: var(--hui-font-family);
+  font-size: var(--hui-font-size-xs);
+  font-weight: 500;
+  line-height: 1;
+  border-radius: var(--hui-radius-full);
+  border: 1px solid transparent;
+}
+
+.hui-chip--solid {
+  background-color: var(--hui-primary);
+  color: white;
+}
+
+.hui-chip--soft {
+  background-color: var(--hui-primary-light);
+  color: var(--hui-primary);
+}
+
+.hui-chip--outline {
+  background-color: transparent;
+  border-color: var(--hui-primary);
+  color: var(--hui-primary);
+}
+
+.hui-chip--accent {
+  background-color: var(--hui-accent-light);
+  color: var(--hui-accent);
+}
+
+.hui-chip--success {
+  background-color: var(--hui-success-light);
+  color: var(--hui-success);
+}
+
+/* ============================================
+   Cards
+   ============================================ */
+.hui-card {
+  display: flex;
+  flex-direction: column;
+  padding: var(--hui-spacing-lg);
+  background-color: white;
+  border: 1px solid var(--hui-slate-200);
+  border-radius: var(--hui-radius-xl);
+  box-shadow: var(--hui-shadow-sm);
+  transition: var(--hui-transition);
+}
+
+.dark .hui-card {
+  background-color: var(--hui-dark-surface);
+  border-color: var(--hui-dark-border);
+}
+
+.hui-card--interactive {
+  cursor: pointer;
+}
+
+.hui-card--interactive:hover {
+  box-shadow: var(--hui-shadow-lg);
+  transform: translateY(-2px);
+}
+
+.hui-card--elevated {
+  box-shadow: var(--hui-shadow-md);
+}
+
+.hui-card--outlined {
+  background-color: transparent;
+  border-width: 2px;
+}
+
+/* ============================================
+   Input Groups
+   ============================================ */
+.hui-input-group {
+  display: inline-flex;
+  align-items: stretch;
+  background-color: white;
+  border: 1px solid var(--hui-slate-300);
+  border-radius: var(--hui-radius-md);
+  overflow: hidden;
+  transition: var(--hui-transition);
+}
+
+.dark .hui-input-group {
+  background-color: var(--hui-dark-surface);
+  border-color: var(--hui-dark-border);
+}
+
+.hui-input-group:focus-within {
+  border-color: var(--hui-primary);
+  box-shadow: 0 0 0 3px var(--hui-primary-light);
+}
+
+.hui-input-group__input {
+  flex: 1;
+  min-width: 0;
+  padding: var(--hui-spacing-sm) var(--hui-spacing-md);
+  font-family: var(--hui-font-family);
+  font-size: var(--hui-font-size-sm);
+  border: none;
+  background-color: transparent;
+  color: var(--hui-slate-800);
+  outline: none;
+}
+
+.dark .hui-input-group__input {
+  color: var(--hui-slate-200);
+}
+
+.hui-input-group__input::placeholder {
+  color: var(--hui-slate-400);
+}
+
+.hui-input-group__prefix,
+.hui-input-group__suffix {
+  display: inline-flex;
+  align-items: center;
+  padding: 0 var(--hui-spacing-sm);
+  background-color: var(--hui-slate-100);
+  color: var(--hui-slate-500);
+  font-size: var(--hui-font-size-sm);
+  border: none;
+}
+
+.dark .hui-input-group__prefix,
+.dark .hui-input-group__suffix {
+  background-color: var(--hui-slate-700);
+  color: var(--hui-slate-400);
+}
+
+/* ============================================
+   Labels
+   ============================================ */
+.hui-label {
+  display: block;
+  font-family: var(--hui-font-family);
+  font-size: var(--hui-font-size-sm);
+  font-weight: 500;
+  color: var(--hui-slate-700);
+  margin-bottom: var(--hui-spacing-xs);
+}
+
+.dark .hui-label {
+  color: var(--hui-slate-300);
+}
+
+/* ============================================
+   Dropdown Menus
+   ============================================ */
+.hui-dropdown-menu {
+  display: flex;
+  flex-direction: column;
+  min-width: 12rem;
+  padding: var(--hui-spacing-sm);
+  background-color: white;
+  border: 1px solid var(--hui-slate-200);
+  border-radius: var(--hui-radius-lg);
+  box-shadow: var(--hui-shadow-lg);
+}
+
+.dark .hui-dropdown-menu {
+  background-color: var(--hui-dark-surface);
+  border-color: var(--hui-dark-border);
+}
+
+.hui-menu-item {
+  display: flex;
+  align-items: center;
+  gap: var(--hui-spacing-sm);
+  padding: var(--hui-spacing-sm) var(--hui-spacing-md);
+  font-family: var(--hui-font-family);
+  font-size: var(--hui-font-size-sm);
+  color: var(--hui-slate-700);
+  text-decoration: none;
+  border-radius: var(--hui-radius-md);
+  transition: var(--hui-transition);
+}
+
+.dark .hui-menu-item {
+  color: var(--hui-slate-300);
+}
+
+.hui-menu-item:hover {
+  background-color: var(--hui-slate-100);
+  color: var(--hui-slate-900);
+}
+
+.dark .hui-menu-item:hover {
+  background-color: var(--hui-slate-700);
+  color: white;
+}
+
+.hui-menu-item--active {
+  background-color: var(--hui-primary-light);
+  color: var(--hui-primary);
+}
+
+.dark .hui-menu-item--active {
+  background-color: var(--hui-primary);
+  color: white;
+}
+
+.hui-menu-divider {
+  height: 1px;
+  margin: var(--hui-spacing-sm) 0;
+  background-color: var(--hui-slate-200);
+}
+
+.dark .hui-menu-divider {
+  background-color: var(--hui-slate-700);
+}
+
+/* ============================================
+   Drawers (Mobile Navigation)
+   ============================================ */
+.hui-drawer-backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--hui-transition-slow);
+}
+
+.hui-drawer-backdrop--open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.hui-drawer-backdrop--opaque {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.hui-drawer-content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+}
+
+.hui-drawer-content--left {
+  justify-content: flex-start;
+}
+
+.hui-drawer-content--right {
+  justify-content: flex-end;
+}
+
+.hui-drawer {
+  display: flex;
+  flex-direction: column;
+  width: 18rem;
+  max-width: 85vw;
+  height: 100%;
+  background-color: white;
+  box-shadow: var(--hui-shadow-xl);
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.dark .hui-drawer {
+  background-color: var(--hui-dark-surface);
+}
+
+.hui-drawer-content--left .hui-drawer {
+  transform: translateX(-100%);
+}
+
+.hui-drawer-backdrop--open .hui-drawer {
+  transform: translateX(0);
+}
+
+.hui-drawer__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--hui-spacing-md) var(--hui-spacing-lg);
+  border-bottom: 1px solid var(--hui-slate-200);
+}
+
+.dark .hui-drawer__header {
+  border-color: var(--hui-slate-700);
+}
+
+.hui-drawer__heading {
+  font-family: var(--hui-font-family);
+  font-size: var(--hui-font-size-lg);
+  font-weight: 700;
+  color: var(--hui-slate-900);
+}
+
+.dark .hui-drawer__heading {
+  color: white;
+}
+
+.hui-drawer__body {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--hui-spacing-lg);
+}
+
+.hui-drawer__footer {
+  padding: var(--hui-spacing-md) var(--hui-spacing-lg);
+  border-top: 1px solid var(--hui-slate-200);
+}
+
+.dark .hui-drawer__footer {
+  border-color: var(--hui-slate-700);
+}
+
+/* ============================================
+   Close Buttons
+   ============================================ */
+.hui-close-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  border-radius: var(--hui-radius-md);
+  color: var(--hui-slate-500);
+  cursor: pointer;
+  transition: var(--hui-transition);
+}
+
+.hui-close-btn:hover {
+  background-color: var(--hui-slate-100);
+  color: var(--hui-slate-700);
+}
+
+.dark .hui-close-btn:hover {
+  background-color: var(--hui-slate-700);
+  color: white;
+}
+
+/* ============================================
+   Toast Notifications
+   ============================================ */
+.hui-toast-region {
+  position: fixed;
+  z-index: 10000;
+  display: flex;
+  flex-direction: column;
+  gap: var(--hui-spacing-sm);
+  max-width: 24rem;
+  pointer-events: none;
+}
+
+.hui-toast-region--top-left {
+  top: var(--hui-spacing-lg);
+  left: var(--hui-spacing-lg);
+}
+
+.hui-toast-region--top-right {
+  top: var(--hui-spacing-lg);
+  right: var(--hui-spacing-lg);
+}
+
+.hui-toast-region--bottom-left {
+  bottom: var(--hui-spacing-lg);
+  left: var(--hui-spacing-lg);
+}
+
+.hui-toast-region--bottom-right,
+.hui-toast-region--bottom-end {
+  bottom: var(--hui-spacing-lg);
+  right: var(--hui-spacing-lg);
+}
+
+.hui-toast {
+  display: flex;
+  flex-direction: column;
+  gap: var(--hui-spacing-xs);
+  padding: var(--hui-spacing-md) var(--hui-spacing-lg);
+  background-color: white;
+  border: 1px solid var(--hui-slate-200);
+  border-radius: var(--hui-radius-lg);
+  box-shadow: var(--hui-shadow-lg);
+  pointer-events: auto;
+  animation: hui-toast-slide-in 0.3s ease-out;
+}
+
+.dark .hui-toast {
+  background-color: var(--hui-dark-surface);
+  border-color: var(--hui-dark-border);
+}
+
+@keyframes hui-toast-slide-in {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.hui-toast--closing {
+  animation: hui-toast-slide-out 0.3s ease-in forwards;
+}
+
+@keyframes hui-toast-slide-out {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+.hui-toast__header {
+  display: flex;
+  align-items: center;
+  gap: var(--hui-spacing-sm);
+}
+
+.hui-toast__icon {
+  flex-shrink: 0;
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.hui-toast__title {
+  font-family: var(--hui-font-family);
+  font-size: var(--hui-font-size-sm);
+  font-weight: 600;
+  color: var(--hui-slate-900);
+}
+
+.dark .hui-toast__title {
+  color: white;
+}
+
+.hui-toast__description {
+  font-family: var(--hui-font-family);
+  font-size: var(--hui-font-size-xs);
+  color: var(--hui-slate-600);
+  line-height: 1.4;
+}
+
+.dark .hui-toast__description {
+  color: var(--hui-slate-400);
+}
+
+.hui-toast--success {
+  border-left: 4px solid var(--hui-success);
+}
+
+.hui-toast--success .hui-toast__icon {
+  color: var(--hui-success);
+}
+
+.hui-toast--error,
+.hui-toast--danger {
+  border-left: 4px solid var(--hui-danger);
+}
+
+.hui-toast--error .hui-toast__icon,
+.hui-toast--danger .hui-toast__icon {
+  color: var(--hui-danger);
+}
+
+.hui-toast--warning {
+  border-left: 4px solid var(--hui-warning);
+}
+
+.hui-toast--warning .hui-toast__icon {
+  color: var(--hui-warning);
+}
+
+.hui-toast--info {
+  border-left: 4px solid var(--hui-primary);
+}
+
+.hui-toast--info .hui-toast__icon {
+  color: var(--hui-primary);
+}
+
+/* ============================================
+   Surfaces
+   ============================================ */
+.hui-surface {
+  padding: var(--hui-spacing-xl);
+  background-color: white;
+  border: 1px solid var(--hui-slate-200);
+  border-radius: var(--hui-radius-xl);
+  box-shadow: var(--hui-shadow-md);
+}
+
+.dark .hui-surface {
+  background-color: var(--hui-dark-surface);
+  border-color: var(--hui-dark-border);
+}
+
+.hui-surface--primary {
+  background-color: var(--hui-primary-light);
+  border-color: var(--hui-primary);
+}
+
+.hui-surface--secondary {
+  background-color: var(--hui-secondary-light);
+  border-color: var(--hui-secondary);
+}
+
+.hui-surface--accent {
+  background-color: var(--hui-accent-light);
+  border-color: var(--hui-accent);
+}
+
+.hui-surface--success {
+  background-color: var(--hui-success-light);
+  border-color: var(--hui-success);
+}
+
+/* ============================================
+   Avatars
+   ============================================ */
+.hui-avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: var(--hui-radius-full);
+  background-color: var(--hui-primary-light);
+  color: var(--hui-primary);
+  font-family: var(--hui-font-family);
+  font-size: var(--hui-font-size-sm);
+  font-weight: 600;
+  overflow: hidden;
+}
+
+.hui-avatar--sm {
+  width: 2rem;
+  height: 2rem;
+  font-size: var(--hui-font-size-xs);
+}
+
+.hui-avatar--lg {
+  width: 3rem;
+  height: 3rem;
+  font-size: var(--hui-font-size-base);
+}
+
+.hui-avatar--xl {
+  width: 4rem;
+  height: 4rem;
+  font-size: var(--hui-font-size-lg);
+}
+
+.hui-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ============================================
+   Progress Bars
+   ============================================ */
+.hui-progress {
+  width: 100%;
+  height: 0.5rem;
+  background-color: var(--hui-slate-200);
+  border-radius: var(--hui-radius-full);
+  overflow: hidden;
+}
+
+.dark .hui-progress {
+  background-color: var(--hui-slate-700);
+}
+
+.hui-progress__bar {
+  height: 100%;
+  background-color: var(--hui-primary);
+  border-radius: var(--hui-radius-full);
+  transition: width 0.3s ease-in-out;
+}
+
+.hui-progress__bar--success {
+  background-color: var(--hui-success);
+}
+
+.hui-progress__bar--warning {
+  background-color: var(--hui-warning);
+}
+
+.hui-progress__bar--danger {
+  background-color: var(--hui-danger);
+}
+
+/* ============================================
+   Utility Classes
+   ============================================ */
+.hui-hidden {
+  display: none !important;
+}
+
+.hui-visible {
+  display: block !important;
+}
+
+.hui-text-center {
+  text-align: center;
+}
+
+.hui-text-right {
+  text-align: right;
+}
+
+.hui-text-left {
+  text-align: left;
+}
+
+.hui-mt-1 { margin-top: var(--hui-spacing-xs); }
+.hui-mt-2 { margin-top: var(--hui-spacing-sm); }
+.hui-mt-3 { margin-top: var(--hui-spacing-md); }
+.hui-mt-4 { margin-top: var(--hui-spacing-lg); }
+.hui-mt-5 { margin-top: var(--hui-spacing-xl); }
+
+.hui-mb-1 { margin-bottom: var(--hui-spacing-xs); }
+.hui-mb-2 { margin-bottom: var(--hui-spacing-sm); }
+.hui-mb-3 { margin-bottom: var(--hui-spacing-md); }
+.hui-mb-4 { margin-bottom: var(--hui-spacing-lg); }
+.hui-mb-5 { margin-bottom: var(--hui-spacing-xl); }
+
+.hui-p-1 { padding: var(--hui-spacing-xs); }
+.hui-p-2 { padding: var(--hui-spacing-sm); }
+.hui-p-3 { padding: var(--hui-spacing-md); }
+.hui-p-4 { padding: var(--hui-spacing-lg); }
+.hui-p-5 { padding: var(--hui-spacing-xl); }
+
+/* ============================================
+   Responsive Utilities
+   ============================================ */
+@media (max-width: 640px) {
+  .hui-sm-hidden {
+    display: none !important;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  .hui-md-hidden {
+    display: none !important;
+  }
+}
+
+@media (min-width: 1025px) {
+  .hui-lg-hidden {
+    display: none !important;
+  }
+}
+
+
+/**
+ * Azadmind Academy - Custom Styles
+ * Pure CSS (No Framework Dependencies)
+ * Version: 2.0.0
+ */
+
+/* Import Vazirmatn Font */
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap');
+
+/* CSS Variables */
+:root {
+  --brand-primary: #4f46e5;
+  --brand-primary-hover: #4338ca;
+  --brand-primary-light: #eef2ff;
+  --brand-accent: #8b5cf6;
+  --brand-success: #10b981;
+  --brand-warning: #f59e0b;
+  --brand-danger: #ef4444;
+  --slate-50: #f8fafc;
+  --slate-100: #f1f5f9;
+  --slate-200: #e2e8f0;
+  --slate-300: #cbd5e1;
+  --slate-400: #94a3b8;
+  --slate-500: #64748b;
+  --slate-600: #475569;
+  --slate-700: #334155;
+  --slate-800: #1e293b;
+  --slate-900: #0f172a;
+  --slate-950: #020617;
+  --font-sans: 'Vazirmatn', sans-serif;
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --radius-sm: 0.25rem;
+  --radius-md: 0.375rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+  --radius-2xl: 1rem;
+  --radius-full: 9999px;
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.dark {
+  --slate-50: #0f172a;
+  --slate-100: #1e293b;
+  --slate-200: #334155;
+  --slate-300: #475569;
+  --slate-400: #64748b;
+  --slate-500: #94a3b8;
+  --slate-600: #cbd5e1;
+  --slate-700: #e2e8f0;
+  --slate-800: #f1f5f9;
+  --slate-900: #f8fafc;
+}
+
+/* Base Reset */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; line-height: 1.5; scroll-behavior: smooth; }
+body { font-family: var(--font-sans); background: var(--slate-50); color: var(--slate-800); direction: rtl; line-height: 1.65; overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+h1, h2, h3, h4, h5, h6 { font-weight: 700; line-height: 1.3; color: var(--slate-900); }
+.dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6 { color: #fff; }
+p { margin-bottom: var(--spacing-md); }
+a { color: var(--brand-primary); text-decoration: none; transition: color 0.2s; }
+a:hover { color: var(--brand-primary-hover); }
+.num-fa { font-feature-settings: "ss01"; font-variant-numeric: tabular-nums; }
+:focus-visible { outline: 2px solid var(--brand-primary); outline-offset: 2px; }
+
+/* Container */
+.container { max-width: 80rem; margin: 0 auto; padding: 0 var(--spacing-md); }
+@media (min-width: 640px) { .container { padding: 0 var(--spacing-lg); } }
+@media (min-width: 1024px) { .container { padding: 0 var(--spacing-xl); } }
+
+/* Grid System */
+.grid { display: grid; gap: var(--spacing-lg); }
+.grid-cols-1 { grid-template-columns: repeat(1, 1fr); }
+.grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
+.grid-cols-3 { grid-template-columns: repeat(3, 1fr); }
+.grid-cols-4 { grid-template-columns: repeat(4, 1fr); }
+@media (min-width: 640px) { .sm\:grid-cols-2 { grid-template-columns: repeat(2, 1fr); } .sm\:grid-cols-3 { grid-template-columns: repeat(3, 1fr); } }
+@media (min-width: 768px) { .md\:grid-cols-2 { grid-template-columns: repeat(2, 1fr); } .md\:grid-cols-3 { grid-template-columns: repeat(3, 1fr); } .md\:grid-cols-4 { grid-template-columns: repeat(4, 1fr); } }
+@media (min-width: 1024px) { .lg\:grid-cols-3 { grid-template-columns: repeat(3, 1fr); } .lg\:grid-cols-4 { grid-template-columns: repeat(4, 1fr); } .lg\:grid-cols-5 { grid-template-columns: repeat(5, 1fr); } }
+
+/* Flexbox */
+.flex { display: flex; } .flex-col { flex-direction: column; } .items-center { align-items: center; } .justify-center { justify-content: center; } .justify-between { justify-content: space-between; }
+.gap-1 { gap: var(--spacing-xs); } .gap-2 { gap: var(--spacing-sm); } .gap-3 { gap: var(--spacing-md); } .gap-4 { gap: var(--spacing-lg); }
+
+/* Header */
+.site-header { position: sticky; top: 0; z-index: 50; background: rgba(255,255,255,0.9); backdrop-filter: blur(8px); border-bottom: 1px solid var(--slate-200); transition: all 0.3s; }
+.dark .site-header { background: rgba(15,23,42,0.9); border-bottom-color: var(--slate-800); }
+.header-inner { display: flex; align-items: center; justify-content: space-between; height: 4rem; gap: var(--spacing-md); }
+.logo img { height: 2.25rem; width: auto; object-fit: contain; transition: transform 0.2s; }
+.logo:hover img { transform: scale(1.05); }
+.nav-desktop { display: none; align-items: center; gap: var(--spacing-xs); }
+@media (min-width: 1024px) { .nav-desktop { display: flex; position: absolute; left: 50%; transform: translateX(-50%); } }
+.nav-link { display: inline-block; padding: var(--spacing-sm) var(--spacing-md); font-size: 0.875rem; font-weight: 500; color: var(--slate-600); border-radius: var(--radius-md); transition: all 0.2s; }
+.dark .nav-link { color: var(--slate-300); }
+.nav-link:hover { background: var(--slate-100); color: var(--slate-900); }
+.dark .nav-link:hover { background: var(--slate-800); color: #fff; }
+.nav-link.active { color: var(--brand-primary); background: var(--brand-primary-light); font-weight: 700; }
+.mobile-menu-btn { display: flex; align-items: center; justify-content: center; padding: var(--spacing-sm); background: transparent; border: none; border-radius: var(--radius-md); color: var(--slate-700); cursor: pointer; }
+.dark .mobile-menu-btn { color: var(--slate-200); }
+.mobile-menu-btn:hover { background: var(--slate-100); }
+.dark .mobile-menu-btn:hover { background: var(--slate-800); }
+@media (min-width: 1024px) { .mobile-menu-btn { display: none; } }
+.header-actions { display: flex; align-items: center; gap: var(--spacing-sm); }
+.theme-toggle-btn { display: inline-flex; align-items: center; justify-content: center; width: 2.5rem; height: 2.5rem; padding: 0; background: transparent; border: none; border-radius: var(--radius-md); color: var(--slate-500); cursor: pointer; }
+.theme-toggle-btn:hover { background: var(--slate-100); color: var(--slate-700); }
+.dark .theme-toggle-btn:hover { background: var(--slate-700); color: #fff; }
+
+/* Footer */
+.site-footer { background: var(--slate-950); color: var(--slate-400); padding: var(--spacing-xl) 0; border-top: 2px solid var(--brand-primary); }
+.footer-grid { display: grid; gap: var(--spacing-xl); padding-bottom: var(--spacing-xl); border-bottom: 1px solid var(--slate-800); }
+@media (min-width: 768px) { .footer-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { .footer-grid { grid-template-columns: repeat(5, 1fr); } }
+.footer-brand { grid-column: span 2; }
+.footer-heading { color: #fff; font-size: 0.875rem; font-weight: 600; margin-bottom: var(--spacing-sm); }
+.footer-links { list-style: none; display: flex; flex-direction: column; gap: var(--spacing-sm); }
+.footer-link { font-size: 0.75rem; color: var(--slate-400); transition: color 0.2s; }
+.footer-link:hover { color: #fff; }
+.footer-bottom { display: flex; flex-direction: column; align-items: center; justify-content: space-between; gap: var(--spacing-md); padding-top: var(--spacing-lg); font-size: 0.6875rem; color: var(--slate-500); }
+@media (min-width: 768px) { .footer-bottom { flex-direction: row; } }
+.footer-bottom-links { display: flex; gap: var(--spacing-lg); }
+.footer-bottom-link { color: var(--slate-500); transition: color 0.2s; }
+.footer-bottom-link:hover { color: var(--slate-300); }
+
+/* Hero Section */
+.hero-section { padding: var(--spacing-xl) 0; border-bottom: 1px solid var(--slate-200); background: #fff; }
+.dark .hero-section { background: var(--slate-900); border-bottom-color: var(--slate-800); }
+.hero-content { max-width: 48rem; margin: 0 auto; text-align: center; display: flex; flex-direction: column; align-items: center; gap: var(--spacing-lg); }
+.hero-title { font-size: 1.875rem; font-weight: 900; color: var(--brand-primary); letter-spacing: -0.025em; }
+@media (min-width: 640px) { .hero-title { font-size: 2.25rem; } }
+@media (min-width: 1024px) { .hero-title { font-size: 3rem; } }
+.hero-subtitle { font-size: 1.25rem; font-weight: 700; color: var(--slate-800); }
+.dark .hero-subtitle { color: var(--slate-100); }
+@media (min-width: 640px) { .hero-subtitle { font-size: 1.5rem; } }
+.hero-description { font-size: 0.875rem; color: var(--slate-600); line-height: 1.75; max-width: 42rem; }
+.dark .hero-description { color: var(--slate-300); }
+@media (min-width: 640px) { .hero-description { font-size: 1rem; } }
+.feature-checkpoints { display: grid; grid-template-columns: 1fr; gap: var(--spacing-sm); padding-top: var(--spacing-lg); border-top: 1px solid var(--slate-100); width: 100%; max-width: 42rem; text-align: right; font-size: 0.875rem; font-weight: 500; color: var(--slate-700); }
+.dark .feature-checkpoints { border-top-color: var(--slate-800); color: var(--slate-300); }
+@media (min-width: 640px) { .feature-checkpoints { grid-template-columns: repeat(2, 1fr); } }
+.checkpoint-item { display: flex; align-items: center; gap: var(--spacing-sm); }
+.checkpoint-icon { width: 1rem; height: 1rem; color: var(--brand-success); flex-shrink: 0; }
+
+/* Stats Bar */
+.stats-bar { padding: var(--spacing-lg); background: var(--slate-100); border: 1px solid var(--slate-300); border-radius: var(--radius-2xl); box-shadow: var(--shadow-xl); display: grid; grid-template-columns: 1fr; gap: var(--spacing-xl); text-align: center; }
+.dark .stats-bar { background: var(--slate-800); border-color: var(--slate-800); }
+@media (min-width: 640px) { .stats-bar { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { .stats-bar { grid-template-columns: repeat(4, 1fr); } }
+.stat-item { display: flex; flex-direction: column; align-items: center; gap: var(--spacing-sm); }
+.stat-value { font-size: 1.875rem; font-weight: 800; color: var(--brand-primary); }
+@media (min-width: 640px) { .stat-value { font-size: 2.25rem; } }
+.stat-label { font-size: 0.875rem; font-weight: 500; color: var(--slate-800); }
+.dark .stat-label { color: var(--slate-200); }
+@media (min-width: 640px) { .stat-label { font-size: 1rem; } }
+
+/* Course Cards */
+.courses-section { padding: var(--spacing-xl) 0; }
+.section-heading { font-size: 1.5rem; font-weight: 900; color: var(--slate-900); padding-bottom: var(--spacing-md); border-bottom: 1px solid var(--slate-200); margin-bottom: var(--spacing-lg); }
+.dark .section-heading { color: #fff; border-bottom-color: var(--slate-800); }
+.course-card { display: flex; flex-direction: column; background: #fff; border: 1px solid var(--slate-200); border-radius: var(--radius-xl); box-shadow: var(--shadow-sm); overflow: hidden; transition: all 0.3s; }
+.dark .course-card { background: var(--slate-900); border-color: var(--slate-800); }
+.course-card:hover { box-shadow: var(--shadow-xl); transform: translateY(-4px); }
+.course-image { width: 100%; height: 14rem; overflow: hidden; position: relative; }
+@media (min-width: 640px) { .course-image { height: 16rem; } }
+.course-image img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
+.course-card:hover .course-image img { transform: scale(1.1); }
+.course-badge { position: absolute; top: var(--spacing-sm); right: var(--spacing-sm); }
+.course-content { padding: var(--spacing-lg); display: flex; flex-direction: column; flex: 1; gap: var(--spacing-lg); }
+.course-title { font-size: 1.25rem; font-weight: 700; color: var(--slate-900); }
+.dark .course-title { color: #fff; }
+@media (min-width: 640px) { .course-title { font-size: 1.5rem; } }
+.course-description { font-size: 0.875rem; color: var(--slate-600); line-height: 1.75; }
+.dark .course-description { color: var(--slate-300); }
+.course-features { list-style: none; display: flex; flex-direction: column; gap: var(--spacing-sm); padding-top: var(--spacing-md); border-top: 1px solid var(--slate-100); }
+.dark .course-features { border-top-color: var(--slate-800); }
+.course-feature { display: flex; align-items: flex-start; gap: var(--spacing-sm); font-size: 0.875rem; font-weight: 500; color: var(--slate-700); }
+.dark .course-feature { color: var(--slate-300); }
+@media (min-width: 640px) { .course-feature { font-size: 0.875rem; } }
+.course-feature-icon { width: 1rem; height: 1rem; color: var(--brand-success); flex-shrink: 0; margin-top: 0.125rem; }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: var(--slate-100); }
+::-webkit-scrollbar-thumb { background: var(--slate-300); border-radius: var(--radius-full); }
+::-webkit-scrollbar-thumb:hover { background: var(--slate-400); }
+.dark ::-webkit-scrollbar-track { background: var(--slate-800); }
+.dark ::-webkit-scrollbar-thumb { background: var(--slate-600); }
+.dark ::-webkit-scrollbar-thumb:hover { background: var(--slate-500); }
+
+/* Utilities */
+.hidden { display: none !important; } .block { display: block; } .inline-block { display: inline-block; }
+.text-center { text-align: center; } .text-right { text-align: right; } .text-left { text-align: left; }
+.mt-1 { margin-top: var(--spacing-xs); } .mt-2 { margin-top: var(--spacing-sm); } .mt-3 { margin-top: var(--spacing-md); } .mt-4 { margin-top: var(--spacing-lg); } .mt-5 { margin-top: var(--spacing-xl); }
+.mb-1 { margin-bottom: var(--spacing-xs); } .mb-2 { margin-bottom: var(--spacing-sm); } .mb-3 { margin-bottom: var(--spacing-md); } .mb-4 { margin-bottom: var(--spacing-lg); } .mb-5 { margin-bottom: var(--spacing-xl); }
+.pt-1 { padding-top: var(--spacing-xs); } .pt-2 { padding-top: var(--spacing-sm); } .pt-3 { padding-top: var(--spacing-md); } .pt-4 { padding-top: var(--spacing-lg); } .pt-5 { padding-top: var(--spacing-xl); }
+.pb-1 { padding-bottom: var(--spacing-xs); } .pb-2 { padding-bottom: var(--spacing-sm); } .pb-3 { padding-bottom: var(--spacing-md); } .pb-4 { padding-bottom: var(--spacing-lg); } .pb-5 { padding-bottom: var(--spacing-xl); }
+@media (max-width: 640px) { .sm-hidden { display: none !important; } }
+@media (min-width: 641px) and (max-width: 1024px) { .md-hidden { display: none !important; } }
+@media (min-width: 1025px) { .lg-hidden { display: none !important; } }
+
+/* Animations */
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes slideUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.animate-fade-in { animation: fadeIn 0.3s ease-out; }
+.animate-slide-up { animation: slideUp 0.5s ease-out; }
+::selection { background: var(--brand-primary); color: #fff; }
+
+/* Print */
+@media print { .site-header, .site-footer, .mobile-menu-btn, .theme-toggle-btn { display: none !important; } body { background: #fff; color: #000; } a { text-decoration: underline; } }
+
+  </style>
+  
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-indigo-500 selection:text-white flex flex-col min-h-screen">
-
-  <header class="sticky top-0 z-50 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 transition-colors">
+<header class="sticky top-0 z-50 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 transition-colors">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="relative flex items-center justify-between h-16">
         <div class="flex items-center gap-3">
@@ -152,10 +1379,7 @@
     </div>
   </footer>
 
-  <!-- HeroUI Pure JS & Main JS -->
-  <script src="js/heroui.js"></script>
-  <script src="js/main.js"></script>
-  <script>
+  <!-- HeroUI Pure JS & Main JS --><script>
     // Theme toggle
     const themeToggle = new HeroUI.ThemeToggle();
     document.getElementById('theme-toggle').addEventListener('click', () => themeToggle.toggle());
@@ -164,6 +1388,956 @@
     const drawerEl = document.getElementById('mobile-drawer');
     const drawerInstance = new HeroUI.Drawer(drawerEl);
     document.getElementById('mobile-menu-btn').addEventListener('click', () => drawerInstance.open());
+  </script>
+
+  <!-- Embedded JavaScript (HeroUI + Main) -->
+  <script>
+/**
+ * HeroUI - Pure JavaScript Framework
+ * A lightweight, dependency-free JavaScript framework for UI interactions
+ * Version: 1.0.0
+ */
+
+(function(window) {
+  'use strict';
+
+  // ============================================
+  // Utility Functions
+  // ============================================
+  
+  function generateId() {
+    return 'hui-' + Math.random().toString(36).substr(2, 9);
+  }
+
+  function createElement(html) {
+    const template = document.createElement('template');
+    template.innerHTML = html.trim();
+    return template.content.firstChild;
+  }
+
+  // ============================================
+  // Theme Toggle (Dark/Light Mode)
+  // ============================================
+  
+  class ThemeToggle {
+    constructor(storageKey = 'hui-theme') {
+      this.storageKey = storageKey;
+      this.init();
+    }
+
+    init() {
+      const savedTheme = localStorage.getItem(this.storageKey);
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      
+      if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    }
+
+    toggle() {
+      const isDark = document.documentElement.classList.toggle('dark');
+      localStorage.setItem(this.storageKey, isDark ? 'dark' : 'light');
+      return isDark;
+    }
+
+    set(theme) {
+      if (theme === 'dark') {
+        document.documentElement.classList.add('dark');
+        localStorage.setItem(this.storageKey, 'dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+        localStorage.setItem(this.storageKey, 'light');
+      }
+    }
+
+    get() {
+      return localStorage.getItem(this.storageKey) || 
+             (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    }
+  }
+
+  // ============================================
+  // Drawer (Mobile Navigation)
+  // ============================================
+  
+  class Drawer {
+    constructor(element, options = {}) {
+      this.element = typeof element === 'string' ? document.querySelector(element) : element;
+      if (!this.element) {
+        console.error('HeroUI Drawer: Element not found');
+        return;
+      }
+      
+      this.options = {
+        onOpen: options.onOpen || (() => {}),
+        onClose: options.onClose || (() => {}),
+        ...options
+      };
+      
+      this.isOpen = false;
+      this.backdrop = this.element;
+      this.closeBtn = this.element.querySelector('.hui-drawer__close');
+      
+      this.bindEvents();
+    }
+
+    bindEvents() {
+      if (this.closeBtn) {
+        this.closeBtn.addEventListener('click', () => this.close());
+      }
+      
+      this.backdrop.addEventListener('click', (e) => {
+        if (e.target === this.backdrop) {
+          this.close();
+        }
+      });
+      
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && this.isOpen) {
+          this.close();
+        }
+      });
+    }
+
+    open() {
+      if (this.isOpen) return;
+      
+      this.backdrop.classList.add('hui-drawer-backdrop--open');
+      document.body.style.overflow = 'hidden';
+      this.isOpen = true;
+      this.options.onOpen(this);
+    }
+
+    close() {
+      if (!this.isOpen) return;
+      
+      this.backdrop.classList.remove('hui-drawer-backdrop--open');
+      document.body.style.overflow = '';
+      this.isOpen = false;
+      this.options.onClose(this);
+    }
+
+    toggle() {
+      if (this.isOpen) {
+        this.close();
+      } else {
+        this.open();
+      }
+    }
+  }
+
+  // ============================================
+  // Toast Notifications
+  // ============================================
+  
+  class Toast {
+    constructor(containerSelector, options = {}) {
+      this.container = typeof containerSelector === 'string' 
+        ? document.querySelector(containerSelector) 
+        : containerSelector;
+      
+      if (!this.container) {
+        console.error('HeroUI Toast: Container not found');
+        return;
+      }
+      
+      this.options = {
+        duration: options.duration || 5000,
+        position: options.position || 'bottom-end',
+        maxToasts: options.maxToasts || 5,
+        ...options
+      };
+      
+      this.toasts = [];
+    }
+
+    show({ title, description, variant = 'info', duration = this.options.duration, icon }) {
+      const toastId = generateId();
+      
+      const toastHtml = `
+        <div class="hui-toast hui-toast--${variant}" id="${toastId}" role="alert">
+          <div class="hui-toast__header">
+            ${icon || this.getDefaultIcon(variant)}
+            <span class="hui-toast__title">${title}</span>
+          </div>
+          ${description ? `<p class="hui-toast__description">${description}</p>` : ''}
+        </div>
+      `;
+      
+      const toastElement = createElement(toastHtml);
+      this.container.appendChild(toastElement);
+      
+      this.toasts.push({ id: toastId, element: toastElement });
+      
+      if (this.toasts.length > this.options.maxToasts) {
+        this.remove(this.toasts[0].id);
+      }
+      
+      const timeoutId = setTimeout(() => {
+        this.remove(toastId);
+      }, duration);
+      
+      toastElement.addEventListener('click', () => {
+        clearTimeout(timeoutId);
+        this.remove(toastId);
+      });
+      
+      return toastId;
+    }
+
+    remove(toastId) {
+      const toastIndex = this.toasts.findIndex(t => t.id === toastId);
+      if (toastIndex === -1) return;
+      
+      const toast = this.toasts[toastIndex];
+      toast.element.classList.add('hui-toast--closing');
+      
+      setTimeout(() => {
+        if (toast.element.parentNode) {
+          toast.element.parentNode.removeChild(toast.element);
+        }
+        this.toasts.splice(toastIndex, 1);
+      }, 300);
+    }
+
+    clear() {
+      this.toasts.forEach(toast => {
+        toast.element.classList.add('hui-toast--closing');
+        setTimeout(() => {
+          if (toast.element.parentNode) {
+            toast.element.parentNode.removeChild(toast.element);
+          }
+        }, 300);
+      });
+      this.toasts = [];
+    }
+
+    getDefaultIcon(variant) {
+      const icons = {
+        success: '<svg class="hui-toast__icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>',
+        error: '<svg class="hui-toast__icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>',
+        warning: '<svg class="hui-toast__icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>',
+        info: '<svg class="hui-toast__icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>'
+      };
+      return icons[variant] || icons.info;
+    }
+  }
+
+  // ============================================
+  // Modal
+  // ============================================
+  
+  class Modal {
+    constructor(element, options = {}) {
+      this.element = typeof element === 'string' ? document.querySelector(element) : element;
+      if (!this.element) {
+        console.error('HeroUI Modal: Element not found');
+        return;
+      }
+      
+      this.options = {
+        onClose: options.onClose || (() => {}),
+        onOpen: options.onOpen || (() => {}),
+        closeOnBackdrop: options.closeOnBackdrop !== false,
+        closeOnEsc: options.closeOnEsc !== false,
+        ...options
+      };
+      
+      this.isOpen = false;
+      this.overlay = this.element.querySelector('[data-modal-overlay]') || this.element;
+      this.closeBtns = this.element.querySelectorAll('[data-modal-close], .hui-modal__close');
+      
+      this.bindEvents();
+    }
+
+    bindEvents() {
+      this.closeBtns.forEach(btn => {
+        btn.addEventListener('click', () => this.close());
+      });
+      
+      if (this.options.closeOnBackdrop) {
+        this.overlay.addEventListener('click', (e) => {
+          if (e.target === this.overlay) {
+            this.close();
+          }
+        });
+      }
+      
+      if (this.options.closeOnEsc) {
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape' && this.isOpen) {
+            this.close();
+          }
+        });
+      }
+    }
+
+    open() {
+      if (this.isOpen) return;
+      
+      this.element.classList.remove('hidden');
+      this.element.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+      this.isOpen = true;
+      this.options.onOpen(this);
+    }
+
+    close() {
+      if (!this.isOpen) return;
+      
+      this.element.classList.add('hidden');
+      this.element.classList.remove('flex');
+      document.body.style.overflow = '';
+      this.isOpen = false;
+      this.options.onClose(this);
+    }
+
+    toggle() {
+      if (this.isOpen) {
+        this.close();
+      } else {
+        this.open();
+      }
+    }
+  }
+
+  // ============================================
+  // Accordion
+  // ============================================
+  
+  class Accordion {
+    constructor(element, options = {}) {
+      this.element = typeof element === 'string' ? document.querySelector(element) : element;
+      if (!this.element) {
+        console.error('HeroUI Accordion: Element not found');
+        return;
+      }
+      
+      this.options = {
+        allowMultiple: options.allowMultiple || false,
+        onToggle: options.onToggle || (() => {}),
+        ...options
+      };
+      
+      this.headers = Array.from(this.element.querySelectorAll('[data-accordion-header], .hui-accordion__header'));
+      this.contents = Array.from(this.element.querySelectorAll('[data-accordion-content], .hui-accordion__content'));
+      
+      this.bindEvents();
+    }
+
+    bindEvents() {
+      this.headers.forEach((header, index) => {
+        header.addEventListener('click', () => this.toggle(index));
+      });
+    }
+
+    toggle(index) {
+      const content = this.contents[index];
+      const header = this.headers[index];
+      if (!content) return;
+      
+      const isOpen = !content.classList.contains('hidden');
+      
+      if (!this.options.allowMultiple) {
+        this.closeAll();
+      }
+      
+      if (isOpen) {
+        this.close(index);
+      } else {
+        this.open(index);
+      }
+      
+      this.options.onToggle(index, !isOpen, this);
+    }
+
+    open(index) {
+      const content = this.contents[index];
+      const header = this.headers[index];
+      if (!content) return;
+      
+      content.classList.remove('hidden');
+      header.setAttribute('aria-expanded', 'true');
+      header.classList.add('active');
+    }
+
+    close(index) {
+      const content = this.contents[index];
+      const header = this.headers[index];
+      if (!content) return;
+      
+      content.classList.add('hidden');
+      header.setAttribute('aria-expanded', 'false');
+      header.classList.remove('active');
+    }
+
+    closeAll() {
+      this.contents.forEach((content, index) => {
+        this.close(index);
+      });
+    }
+
+    openAll() {
+      this.contents.forEach((content, index) => {
+        this.open(index);
+      });
+    }
+  }
+
+  // ============================================
+  // Tabs
+  // ============================================
+  
+  class Tabs {
+    constructor(element, options = {}) {
+      this.element = typeof element === 'string' ? document.querySelector(element) : element;
+      if (!this.element) {
+        console.error('HeroUI Tabs: Element not found');
+        return;
+      }
+      
+      this.options = {
+        defaultTab: options.defaultTab || 0,
+        onChange: options.onChange || (() => {}),
+        ...options
+      };
+      
+      this.tabList = this.element.querySelector('[data-tab-list], .hui-tabs__list');
+      this.panels = Array.from(this.element.querySelectorAll('[data-tab-panel], .hui-tabs__panel'));
+      this.tabs = Array.from(this.tabList?.querySelectorAll('[data-tab], .hui-tab') || []);
+      
+      this.activeIndex = this.options.defaultTab;
+      this.bindEvents();
+      this.show(this.activeIndex);
+    }
+
+    bindEvents() {
+      this.tabs.forEach((tab, index) => {
+        tab.addEventListener('click', (e) => {
+          e.preventDefault();
+          this.show(index);
+        });
+        
+        tab.addEventListener('keydown', (e) => {
+          if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') {
+            e.preventDefault();
+            const direction = e.key === 'ArrowLeft' ? 1 : -1;
+            const newIndex = (this.activeIndex + direction + this.tabs.length) % this.tabs.length;
+            this.show(newIndex);
+            this.tabs[newIndex].focus();
+          }
+        });
+      });
+    }
+
+    show(index) {
+      if (index < 0 || index >= this.tabs.length) return;
+      
+      this.tabs.forEach((tab, i) => {
+        tab.classList.toggle('active', i === index);
+        tab.setAttribute('aria-selected', i === index);
+      });
+      
+      this.panels.forEach((panel, i) => {
+        panel.classList.toggle('hidden', i !== index);
+      });
+      
+      this.activeIndex = index;
+      this.options.onChange(index, this);
+    }
+
+    getActiveIndex() {
+      return this.activeIndex;
+    }
+  }
+
+  // ============================================
+  // Dropdown
+  // ============================================
+  
+  class Dropdown {
+    constructor(triggerElement, menuElement, options = {}) {
+      this.trigger = typeof triggerElement === 'string' 
+        ? document.querySelector(triggerElement) 
+        : triggerElement;
+      this.menu = typeof menuElement === 'string' 
+        ? document.querySelector(menuElement) 
+        : menuElement;
+      
+      if (!this.trigger || !this.menu) {
+        console.error('HeroUI Dropdown: Trigger or menu not found');
+        return;
+      }
+      
+      this.options = {
+        placement: options.placement || 'bottom-start',
+        closeOnClickOutside: options.closeOnClickOutside !== false,
+        closeOnEsc: options.closeOnEsc !== false,
+        onOpen: options.onOpen || (() => {}),
+        onClose: options.onClose || (() => {}),
+        ...options
+      };
+      
+      this.isOpen = false;
+      this.bindEvents();
+    }
+
+    bindEvents() {
+      this.trigger.addEventListener('click', (e) => {
+        e.preventDefault();
+        this.toggle();
+      });
+      
+      if (this.options.closeOnEsc) {
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape' && this.isOpen) {
+            this.close();
+          }
+        });
+      }
+      
+      if (this.options.closeOnClickOutside) {
+        document.addEventListener('click', (e) => {
+          if (this.isOpen && !this.trigger.contains(e.target) && !this.menu.contains(e.target)) {
+            this.close();
+          }
+        });
+      }
+    }
+
+    open() {
+      if (this.isOpen) return;
+      
+      this.menu.classList.remove('hidden');
+      this.trigger.setAttribute('aria-expanded', 'true');
+      this.isOpen = true;
+      this.options.onOpen(this);
+    }
+
+    close() {
+      if (!this.isOpen) return;
+      
+      this.menu.classList.add('hidden');
+      this.trigger.setAttribute('aria-expanded', 'false');
+      this.isOpen = false;
+      this.options.onClose(this);
+    }
+
+    toggle() {
+      if (this.isOpen) {
+        this.close();
+      } else {
+        this.open();
+      }
+    }
+  }
+
+  // ============================================
+  // Tooltip
+  // ============================================
+  
+  class Tooltip {
+    constructor(element, options = {}) {
+      this.element = typeof element === 'string' ? document.querySelector(element) : element;
+      if (!this.element) {
+        console.error('HeroUI Tooltip: Element not found');
+        return;
+      }
+      
+      this.options = {
+        content: options.content || this.element.getAttribute('data-tooltip') || this.element.title,
+        placement: options.placement || 'top',
+        delay: options.delay || 200,
+        ...options
+      };
+      
+      this.tooltip = null;
+      this.timeout = null;
+      this.bindEvents();
+    }
+
+    bindEvents() {
+      this.element.addEventListener('mouseenter', () => this.show());
+      this.element.addEventListener('mouseleave', () => this.hide());
+      this.element.addEventListener('focus', () => this.show());
+      this.element.addEventListener('blur', () => this.hide());
+      
+      this.element.removeAttribute('title');
+    }
+
+    show() {
+      if (this.timeout) {
+        clearTimeout(this.timeout);
+      }
+      
+      this.timeout = setTimeout(() => {
+        this.tooltip = createElement(`
+          <div class="hui-tooltip" role="tooltip" style="position: absolute; z-index: 10000;">
+            ${this.options.content}
+          </div>
+        `);
+        
+        document.body.appendChild(this.tooltip);
+        this.updatePosition();
+      }, this.options.delay);
+    }
+
+    hide() {
+      if (this.timeout) {
+        clearTimeout(this.timeout);
+        this.timeout = null;
+      }
+      
+      if (this.tooltip) {
+        this.tooltip.remove();
+        this.tooltip = null;
+      }
+    }
+
+    updatePosition() {
+      if (!this.tooltip) return;
+      
+      const rect = this.element.getBoundingClientRect();
+      const tooltipRect = this.tooltip.getBoundingClientRect();
+      
+      let top, left;
+      
+      switch (this.options.placement) {
+        case 'top':
+          top = rect.top - tooltipRect.height - 8;
+          left = rect.left + (rect.width - tooltipRect.width) / 2;
+          break;
+        case 'bottom':
+          top = rect.bottom + 8;
+          left = rect.left + (rect.width - tooltipRect.width) / 2;
+          break;
+        case 'left':
+          top = rect.top + (rect.height - tooltipRect.height) / 2;
+          left = rect.left - tooltipRect.width - 8;
+          break;
+        case 'right':
+          top = rect.top + (rect.height - tooltipRect.height) / 2;
+          left = rect.right + 8;
+          break;
+        default:
+          top = rect.top - tooltipRect.height - 8;
+          left = rect.left + (rect.width - tooltipRect.width) / 2;
+      }
+      
+      this.tooltip.style.top = `${top}px`;
+      this.tooltip.style.left = `${left}px`;
+    }
+  }
+
+  // ============================================
+  // Expose to Global Scope
+  // ============================================
+  
+  window.HeroUI = {
+    ThemeToggle,
+    Drawer,
+    Toast,
+    Modal,
+    Accordion,
+    Tabs,
+    Dropdown,
+    Tooltip,
+    version: '1.0.0'
+  };
+
+})(window);
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  // 1. Mobile Menu Toggle
+  const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const mobileMenuIconOpen = document.getElementById('menu-icon-open');
+  const mobileMenuIconClose = document.getElementById('menu-icon-close');
+
+  if (mobileMenuBtn && mobileMenu) {
+    mobileMenuBtn.addEventListener('click', () => {
+      const isHidden = mobileMenu.classList.contains('hidden');
+      if (isHidden) {
+        mobileMenu.classList.remove('hidden');
+        if (mobileMenuIconOpen) mobileMenuIconOpen.classList.add('hidden');
+        if (mobileMenuIconClose) mobileMenuIconClose.classList.remove('hidden');
+      } else {
+        mobileMenu.classList.add('hidden');
+        if (mobileMenuIconOpen) mobileMenuIconOpen.classList.remove('hidden');
+        if (mobileMenuIconClose) mobileMenuIconClose.classList.add('hidden');
+      }
+    });
+  }
+
+  // 2. Course Registration Modal Controls
+  const openModalBtns = document.querySelectorAll('.js-open-reg-modal');
+  const closeModalBtns = document.querySelectorAll('.js-close-reg-modal');
+  const modalOverlay = document.getElementById('registration-modal');
+  const regForm = document.getElementById('modal-reg-form');
+  const regSuccess = document.getElementById('modal-reg-success');
+
+  openModalBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      if (modalOverlay) {
+        modalOverlay.classList.remove('hidden');
+        modalOverlay.classList.add('flex');
+        document.body.style.overflow = 'hidden';
+      }
+    });
+  });
+
+  closeModalBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      if (modalOverlay) {
+        modalOverlay.classList.add('hidden');
+        modalOverlay.classList.remove('flex');
+        document.body.style.overflow = '';
+      }
+    });
+  });
+
+  if (modalOverlay) {
+    modalOverlay.addEventListener('click', (e) => {
+      if (e.target === modalOverlay) {
+        modalOverlay.classList.add('hidden');
+        modalOverlay.classList.remove('flex');
+        document.body.style.overflow = '';
+      }
+    });
+  }
+
+  if (regForm) {
+    regForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const submitBtn = regForm.querySelector('button[type="submit"]');
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = `<span>در حال ارسال...</span>`;
+      }
+      setTimeout(() => {
+        regForm.classList.add('hidden');
+        if (regSuccess) regSuccess.classList.remove('hidden');
+      }, 600);
+    });
+  }
+
+  // 3. Chapter Accordion Toggles
+  const chapterHeaders = document.querySelectorAll('.js-chapter-toggle');
+  chapterHeaders.forEach(header => {
+    header.addEventListener('click', () => {
+      const content = header.nextElementSibling;
+      const arrow = header.querySelector('.js-accordion-arrow');
+      if (content) {
+        const isHidden = content.classList.contains('hidden');
+        if (isHidden) {
+          content.classList.remove('hidden');
+          if (arrow) arrow.style.transform = 'rotate(180deg)';
+        } else {
+          content.classList.add('hidden');
+          if (arrow) arrow.style.transform = 'rotate(0deg)';
+        }
+      }
+    });
+  });
+
+  // 4. FAQ Accordion Toggles
+  const faqHeaders = document.querySelectorAll('.js-faq-toggle');
+  faqHeaders.forEach(header => {
+    header.addEventListener('click', () => {
+      const content = header.nextElementSibling;
+      const arrow = header.querySelector('.js-faq-arrow');
+      if (content) {
+        const isHidden = content.classList.contains('hidden');
+        if (isHidden) {
+          content.classList.remove('hidden');
+          if (arrow) arrow.style.transform = 'rotate(180deg)';
+        } else {
+          content.classList.add('hidden');
+          if (arrow) arrow.style.transform = 'rotate(0deg)';
+        }
+      }
+    });
+  });
+
+  // 5. Contact Form Handler
+  const contactForm = document.getElementById('contact-form');
+  const contactSuccess = document.getElementById('contact-success-msg');
+  if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const submitBtn = contactForm.querySelector('button[type="submit"]');
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = `<span>در حال ارسال...</span>`;
+      }
+      setTimeout(() => {
+        contactForm.classList.add('hidden');
+        if (contactSuccess) contactSuccess.classList.remove('hidden');
+      }, 600);
+    });
+  }
+
+  // 6. Blog Filter & Search Handler
+  const blogSearchInput = document.getElementById('blog-search') || document.getElementById('blog-search-input');
+  const filterBtns = document.querySelectorAll('.js-filter-btn, .js-category-btn');
+  const articleCards = document.querySelectorAll('.article-card, .js-blog-card');
+
+  let activeCategory = 'all';
+
+  function filterBlogPosts() {
+    const query = (blogSearchInput ? blogSearchInput.value : '').trim().toLowerCase();
+    articleCards.forEach(card => {
+      const cardCat = card.getAttribute('data-category');
+      const textContent = card.textContent.toLowerCase();
+
+      const matchesCat = activeCategory === 'all' || cardCat === activeCategory;
+      const matchesSearch = !query || textContent.includes(query);
+
+      if (matchesCat && matchesSearch) {
+        card.classList.remove('hidden');
+      } else {
+        card.classList.add('hidden');
+      }
+    });
+  }
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => {
+        b.classList.remove('bg-indigo-600', 'text-white', 'font-bold', 'bg-slate-900');
+        b.classList.add('bg-white', 'border', 'border-slate-200', 'text-slate-700');
+      });
+      btn.classList.remove('bg-white', 'border', 'border-slate-200', 'text-slate-700');
+      btn.classList.add('bg-indigo-600', 'text-white', 'font-bold');
+      activeCategory = btn.getAttribute('data-category') || 'all';
+      filterBlogPosts();
+    });
+  });
+
+  if (blogSearchInput) {
+    blogSearchInput.addEventListener('input', filterBlogPosts);
+    const searchUrlParam = new URLSearchParams(window.location.search).get('q');
+    if (searchUrlParam) {
+      blogSearchInput.value = searchUrlParam;
+      filterBlogPosts();
+    }
+  }
+
+  // 7. Dynamic Article Renderer based on ?id= query param
+  const articlesData = {
+    'how-to-read-1000-wpm': {
+      title: 'چگونه به سرعت مطالعه ۱۰۰۰ کلمه در دقیقه برسیم؟ (راهنمای عملی)',
+      category: 'تندخوانی',
+      author: 'استاد حسن مرادی',
+      authorRole: 'مدرس و پژوهشگر تندخوانی و تقویت حافظه',
+      authorAvatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=400',
+      date: '۱۴۰۴/۰۵/۱۰',
+      readTime: '۷ دقیقه',
+      cover: 'https://images.unsplash.com/photo-1506880018603-83d5b814b5a6?auto=format&fit=crop&q=80&w=1200',
+      content: `
+        <p class="text-slate-800 font-medium leading-relaxed bg-indigo-50/60 p-4 rounded-2xl border-r-4 border-indigo-600">
+          تندخوانی یک استعداد مادرزادی یا جادویی نیست؛ بلکه مجموعه‌ای از تکنیک‌های فیزیولوژیک جهت همگام‌سازی سرعت حرکت چشم با قدرت پردازش بینایی مغز است. میانگین سرعت مطالعه افراد عادی حدود ۱۵۰ الی ۲۵۰ کلمه در دقیقه است، در حالی که با تمرینات منظم می‌توان این سرعت را به بالای ۱۰۰۰ کلمه ارتقا داد.
+        </p>
+        <h2 class="text-xl font-bold text-slate-900 pt-4">۱. حذف خطای بلندخوانی ذهنی (Sub-vocalization)</h2>
+        <p>بزرگ‌ترین مانع در افزایش سرعت مطالعه، تلفظ کلمات در ذهن هنگام خواندن است. هنگامی که کلمات را درون ذهن خود تکرار می‌کنید، سرعت مطالعه شما به سقف سرعت صحبت کردن محدود خواهد شد.</p>
+        <h2 class="text-xl font-bold text-slate-900 pt-4">۲. استفاده از چوب‌بردن یا خط‌بردن (Pacing)</h2>
+        <p>چشم انسان به طور طبیعی هنگام خواندن حرکت‌های نامنظم دارد. استفاده از یک مداد یا انگشت اشاره، به چشم فرمان می‌دهد که با سرعتی ثابت به سمت جلو حرکت کند.</p>
+        <h2 class="text-xl font-bold text-slate-900 pt-4">۳. گسترش میدان دید محیطی (Peripheral Vision)</h2>
+        <p>به جای خواندن کلمه به کلمه، آموختن تکنیک عبارت‌خوانی به شما اجازه می‌دهد در هر توقف چشم، ۳ الی ۴ کلمه را هم‌زمان دریافت کنید.</p>
+      `
+    },
+    'ebbinghaus-forgetting-curve': {
+      title: 'منحنی فراموشی ابینگهاوس: چرا مطالب را فراموش می‌کنیم و چگونه جلوی آن را بگیریم؟',
+      category: 'تقویت حافظه',
+      author: 'فاطمه آزادخواه',
+      authorRole: 'بنیان‌گذار ذهن آزاد و پژوهشگر روش‌های یادگیری',
+      authorAvatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=400',
+      date: '۱۴۰۴/۰۵/۰۵',
+      readTime: '۵ دقیقه',
+      cover: 'https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&q=80&w=800',
+      content: `
+        <p class="text-slate-800 font-medium leading-relaxed bg-purple-50/60 p-4 rounded-2xl border-r-4 border-purple-600">
+          بر اساس پژوهش‌های هرمان ابینگهاوس، انسان‌ها حدود ۷۰ درصد از اطلاعات جدید را در ۲۴ ساعت اول فراموش می‌کنند مگر آنکه زمان‌بندی مرور طلایی را رعایت نمایند.
+        </p>
+        <h2 class="text-xl font-bold text-slate-900 pt-4">اصول مرور فاصله‌دار (Spaced Repetition)</h2>
+        <p>با مرور اطلاعات در فواصل ۲۰ دقیقه، ۲۴ ساعت، ۱ هفته و ۱ ماه بعد، مسیرهای عصبی ثبت اطلاعات تقویت شده و تثبیت ۱۰۰ درصدی در حافظه بلندمدت اتفاق می‌افتد.</p>
+      `
+    },
+    'public-speaking-stage-fright': {
+      title: 'غلبه بر ترس از سخنرانی: ۵ تکنیک کاربردی برای کنترل اضطراب قبل از رفتن روی سن',
+      category: 'فن بیان',
+      author: 'فاطمه آزادخواه',
+      authorRole: 'بنیان‌گذار ذهن آزاد و پژوهشگر روش‌های یادگیری',
+      authorAvatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=400',
+      date: '۱۴۰۴/۰۴/۲۸',
+      readTime: '۶ دقیقه',
+      cover: 'https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&q=80&w=800',
+      content: `
+        <p class="text-slate-800 font-medium leading-relaxed bg-emerald-50/60 p-4 rounded-2xl border-r-4 border-emerald-600">
+          اضطراب سخنرانی (Glossophobia) یکی از شایع‌ترین ترس‌های روانی در دنیای امروز است. با به‌کارگیری تکنیک‌های تنفس عمیق و آماده‌سازی محتوا می‌توانید این ترس را کاملاً کنترل کنید.
+        </p>
+        <h2 class="text-xl font-bold text-slate-900 pt-4">۱. تکنیک تنفس ۴-۷-۸</h2>
+        <p>تنفس دیافراگمی و کنترل ضربان قلب قبل از سخنرانی، سیستم عصب پاراسمپاتیک شما را فعال کرده و آرامش آنی ایجاد می‌کند.</p>
+      `
+    },
+    'feynman-technique-explained': {
+      title: 'تکنیک فاینمن: ساده‌ترین روش یادگیری سخت‌ترین فرمول‌ها و مفاهیم',
+      category: 'روش‌های مطالعه',
+      author: 'فاطمه آزادخواه',
+      authorRole: 'بنیان‌گذار ذهن آزاد و پژوهشگر روش‌های یادگیری',
+      authorAvatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=400',
+      date: '۱۴۰۴/۰۴/۲۰',
+      readTime: '۸ دقیقه',
+      cover: 'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80&w=800',
+      content: `
+        <p class="text-slate-800 font-medium leading-relaxed bg-amber-50/60 p-4 rounded-2xl border-r-4 border-amber-600">
+          ریچارد فاینمن برنده جایزه نوبل فیزیک معتقد بود: «اگر نتوانید چیزی را به یک کودک ۱۲ ساله به زبان ساده توضیح دهید، خودتان آن را نفهمیده‌اید!»
+        </p>
+        <h2 class="text-xl font-bold text-slate-900 pt-4">۴ گام اصلی تکنیک فاینمن</h2>
+        <p>۱. انتخاب موضوع <br>۲. آموزش مفاهیم به زبان کودکانه <br>۳. ریشه‌یابی نقاط مبهم و مراجعه مجدد به منبع <br>۴. ساده‌سازی و استفاده از تشبیهات داستانی</p>
+      `
+    }
+  };
+
+  const urlParams = new URLSearchParams(window.location.search);
+  const articleId = urlParams.get('id');
+
+  if (articleId && articlesData[articleId]) {
+    const data = articlesData[articleId];
+    const articleTitleEl = document.getElementById('article-title');
+    const articleCatBreadcrumb = document.getElementById('article-category-breadcrumb');
+    const articleBadge = document.getElementById('article-badge');
+    const articleAuthorName = document.getElementById('article-author-name');
+    const articleDate = document.getElementById('article-date');
+    const articleReadTime = document.getElementById('article-read-time');
+    const articleCoverImg = document.getElementById('article-cover-img');
+    const articleContentEl = document.getElementById('article-content');
+    const authorNameTitle = document.getElementById('author-name-title');
+    const authorRole = document.getElementById('author-role');
+    const authorAvatar = document.getElementById('author-avatar');
+
+    if (articleTitleEl) articleTitleEl.textContent = data.title;
+    if (articleCatBreadcrumb) articleCatBreadcrumb.textContent = data.category;
+    if (articleBadge) articleBadge.textContent = `آموزش تخصصی ${data.category}`;
+    if (articleAuthorName) articleAuthorName.textContent = `نویسنده: ${data.author}`;
+    if (articleDate) articleDate.textContent = `تاریخ انتشار: ${data.date}`;
+    if (articleReadTime) articleReadTime.textContent = `زمان مطالعه: ${data.readTime}`;
+    if (articleCoverImg) {
+      articleCoverImg.src = data.cover;
+      articleCoverImg.alt = data.title;
+    }
+    if (articleContentEl) articleContentEl.innerHTML = data.content;
+    if (authorNameTitle) authorNameTitle.textContent = data.author;
+    if (authorRole) authorRole.textContent = data.authorRole;
+    if (authorAvatar) authorAvatar.src = data.authorAvatar;
+    document.title = `${data.title} | آکادمی ذهن آزاد`;
+  }
+});
+
   </script>
 </body>
 </html>

@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>دوره جامع تندخوانی و تقویت حافظه | آکادمی ذهن آزاد</title>
+  <meta name="description" content="آموزش جامع و تخصصی تندخوانی و تقویت حافظه با متد علمی کتابدانه">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- HeroUI Pure CSS & Project Style -->
+  <link rel="stylesheet" href="css/heroui.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-indigo-500 selection:text-white flex flex-col min-h-screen">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="relative flex items-center justify-between h-16">
+        
+        <!-- Logo -->
+        <div class="flex items-center gap-3">
+          <a href="index.html" class="flex items-center group py-1" aria-label="آکادمی ذهن آزاد">
+            <img src="assets/logo.svg" alt="آکادمی ذهن آزاد" class="h-9 w-auto object-contain transition-transform group-hover:scale-105" />
+          </a>
+          <span class="hui-badge hui-badge--accent hidden sm:inline-flex">HeroUI</span>
+        </div>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden lg:flex items-center justify-center gap-1 font-medium text-xs text-slate-600 dark:text-slate-300 absolute left-1/2 -translate-x-1/2">
+          <a href="index.html" class="px-3 py-1.5 rounded-md hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">صفحه اصلی</a>
+          <a href="speed-reading.html" class="px-3 py-1.5 rounded-md text-indigo-600 dark:text-indigo-400 font-bold bg-indigo-50 dark:bg-indigo-950/50">تندخوانی</a>
+          <a href="public-speaking.html" class="px-3 py-1.5 rounded-md hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">فن بیان</a>
+          <a href="blog.html" class="px-3 py-1.5 rounded-md hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">مجله آموزشی</a>
+          <a href="about.html" class="px-3 py-1.5 rounded-md hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">درباره ما</a>
+          <a href="contact.html" class="px-3 py-1.5 rounded-md hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">تماس با ما</a>
+        </nav>
+
+        <!-- Actions -->
+        <div class="flex items-center gap-2">
+          <button id="theme-toggle" class="hui-close-btn" style="width: 2.1rem; height: 2.1rem;" title="تغییر تم">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-5.4-5.4c0-1.81 .89-3.42 2.26-4.4C12.92 3.04 12.46 3 12 3z"/></svg>
+          </button>
+          <button id="mobile-menu-btn" class="lg:hidden p-2 text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Navigation -->
+  <div class="hui-drawer-backdrop hui-drawer-backdrop--opaque" id="mobile-drawer">
+    <div class="hui-drawer-content hui-drawer-content--right">
+      <div class="hui-drawer" style="width: 18rem;">
+        <div class="hui-drawer__header">
+          <div class="flex items-center justify-between">
+            <h3 class="hui-drawer__heading">منوی آکادمی</h3>
+            <button class="hui-close-btn hui-drawer__close" aria-label="Close">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+            </button>
+          </div>
+        </div>
+        <div class="hui-drawer__body" style="padding-top: 1rem;">
+          <div class="hui-dropdown-menu">
+            <a href="index.html" class="hui-menu-item">صفحه اصلی</a>
+            <a href="speed-reading.html" class="hui-menu-item" style="font-weight: 700; color: var(--hui-accent);">دوره تندخوانی</a>
+            <a href="public-speaking.html" class="hui-menu-item">دوره فن بیان</a>
+            <a href="blog.html" class="hui-menu-item">مجله آموزشی</a>
+            <a href="about.html" class="hui-menu-item">درباره ما</a>
+            <a href="contact.html" class="hui-menu-item">تماس با ما</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Container -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-16 flex-grow space-y-6">
+    
+    <!-- HeroUI Breadcrumbs -->
+    <nav class="hui-breadcrumbs" aria-label="Breadcrumb">
+      <span class="hui-breadcrumbs__item">
+        <a class="hui-breadcrumbs__link" href="index.html">صفحه اصلی</a>
+        <svg class="hui-breadcrumbs__separator" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg>
+      </span>
+      <span class="hui-breadcrumbs__item">
+        <a class="hui-breadcrumbs__link is-current" aria-current="page" href="#">تندخوانی و تقویت حافظه</a>
+      </span>
+    </nav>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+      
+      <!-- RIGHT COLUMN: Main Content -->
+      <div class="lg:col-span-7 xl:col-span-8 space-y-8">
+        
+        <!-- Header Title & Subtitle -->
+        <div class="space-y-4">
+          <div class="flex items-center gap-2">
+            <span class="hui-chip hui-chip--soft hui-chip--accent">تندخوانی تخصصی</span>
+            <span class="hui-badge hui-badge--success">تضمین درک مطلب فوق‌العاده</span>
+          </div>
+          <h1 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 dark:text-white leading-tight tracking-tight">
+            آموزش جامع و تخصصی تندخوانی و تقویت حافظه با متد کتابدانه
+          </h1>
+          <p class="text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed text-justify font-normal">
+            در این دوره تخصصی، یاد می‌گیرید چگونه سیستم‌های یادگیری، تمرکز حواس و تندخوانی مقیاس‌پذیر و مدرن را با جدیدترین ابزارها و استانداردهای علمی آماده و پیاده‌سازی نمایید.
+          </p>
+        </div>
+
+        <!-- Instructor Box -->
+        <div class="hui-card flex items-center justify-between gap-4">
+          <div class="space-y-1">
+            <span class="hui-badge hui-badge--accent">مدرس دوره</span>
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white tracking-tight">استاد محمدرضا نهایی</h3>
+            <p class="text-slate-600 dark:text-slate-300 text-xs sm:text-sm">بنیان‌گذار و مدرس ارشد آکادمی تخصصی کتابدانه</p>
+            <p class="text-slate-500 dark:text-slate-400 text-xs mt-1 leading-relaxed">
+              ارشد علوم شناختی و مدرس ارشد بین‌المللی تندخوانی و تقویت حافظه با بیش از ۱۲ سال تجربه آموزش موفق به بیش از ۵۰,۰۰۰ دانش‌پذیر در سراسر کشور.
+            </p>
+          </div>
+        </div>
+
+        <!-- Course Curriculum HeroUI Accordion Section -->
+        <div class="space-y-4">
+          <div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-2">
+            <div class="flex items-center gap-2 text-xl font-bold text-slate-900 dark:text-white">
+              <h2>سرفصل‌های دوره آموزشی</h2>
+            </div>
+            <span class="hui-badge hui-badge--default">۵ فصل جامع (۶۵ جلسه)</span>
+          </div>
+
+          <div class="hui-card" style="padding: 0;">
+            <div class="hui-accordion">
+              
+              <!-- Chapter 1 -->
+              <div class="hui-accordion__item">
+                <button class="hui-accordion__trigger" aria-expanded="true">
+                  <span class="text-sm sm:text-base font-bold text-slate-900 dark:text-white">فصل اول: مفاهیم پایه و معماری سیستم‌های تندخوانی</span>
+                  <svg class="hui-accordion__indicator" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                </button>
+                <div class="hui-accordion__panel is-open" style="height: auto;">
+                  <div class="hui-accordion__body space-y-3">
+                    <p class="text-xs text-slate-600 dark:text-slate-400">آشنایی با اصول فیزیولوژی چشم، مکانیزم نوروپلاستیسیته مغز و حذف عادت‌های غلط مطالعه سنتی.</p>
+                    <div class="space-y-2">
+                      <div class="p-3 bg-slate-50 dark:bg-slate-800/60 rounded-xl flex items-center justify-between text-xs">
+                        <span>۱. ارزیابی اولیه سرعت مطالعه و سنجش نرخ WPM اولیه</span>
+                        <span class="hui-badge hui-badge--accent">۴۵ دقیقه</span>
+                      </div>
+                      <div class="p-3 bg-slate-50 dark:bg-slate-800/60 rounded-xl flex items-center justify-between text-xs">
+                        <span>۲. شناخت و حذف خطای بلندخوانی ذهنی (Sub-vocalization)</span>
+                        <span class="hui-badge hui-badge--accent">۵۰ دقیقه</span>
+                      </div>
+                      <div class="p-3 bg-slate-50 dark:bg-slate-800/60 rounded-xl flex items-center justify-between text-xs">
+                        <span>۳. تکنیک خط‌بری متمرکز و کنترل حرکت چشمی</span>
+                        <span class="hui-badge hui-badge--accent">۴۰ دقیقه</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <hr class="hui-separator">
+
+              <!-- Chapter 2 -->
+              <div class="hui-accordion__item">
+                <button class="hui-accordion__trigger" aria-expanded="false">
+                  <span class="text-sm sm:text-base font-bold text-slate-900 dark:text-white">فصل دوم: نقشه ذهنی و تکنیک‌های تقویت حافظه</span>
+                  <svg class="hui-accordion__indicator" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                </button>
+                <div class="hui-accordion__panel" style="height: 0;">
+                  <div class="hui-accordion__body space-y-3">
+                    <p class="text-xs text-slate-600 dark:text-slate-400">آموزش سیستماتیک نقشه ذهنی (Mind Mapping)، سیستم کدگذاری اطلاعات و سازماندهی شبکه عصبی مغز.</p>
+                    <div class="space-y-2">
+                      <div class="p-3 bg-slate-50 dark:bg-slate-800/60 rounded-xl flex items-center justify-between text-xs">
+                        <span>۱. اصول رسم نقشه ذهنی (Mind Map) حرفه‌ای</span>
+                        <span class="hui-badge hui-badge--accent">۵۵ دقیقه</span>
+                      </div>
+                      <div class="p-3 bg-slate-50 dark:bg-slate-800/60 rounded-xl flex items-center justify-between text-xs">
+                        <span>۲. تکنیک تصویرسازی و سیستم کاخ حافظه (Memory Palace)</span>
+                        <span class="hui-badge hui-badge--accent">۶۵ دقیقه</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <hr class="hui-separator">
+
+              <!-- Chapter 3 -->
+              <div class="hui-accordion__item">
+                <button class="hui-accordion__trigger" aria-expanded="false">
+                  <span class="text-sm sm:text-base font-bold text-slate-900 dark:text-white">فصل سوم: تمرینات تخصصی عضلات چشم و جدول شولته</span>
+                  <svg class="hui-accordion__indicator" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                </button>
+                <div class="hui-accordion__panel" style="height: 0;">
+                  <div class="hui-accordion__body space-y-3">
+                    <p class="text-xs text-slate-600 dark:text-slate-400">تمرینات تخصصی گسترش حوزه دید محیطی و افزایش سرعت پردازش تصویر بینایی.</p>
+                    <div class="space-y-2">
+                      <div class="p-3 bg-slate-50 dark:bg-slate-800/60 rounded-xl flex items-center justify-between text-xs">
+                        <span>۱. جدول شولته (Schulte Table) و تقویت تمرکز دیداری</span>
+                        <span class="hui-badge hui-badge--accent">۵۰ دقیقه</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- About this course -->
+        <div class="hui-card space-y-4">
+          <h2 class="text-xl font-bold text-slate-900 dark:text-white">درباره این دوره</h2>
+          <div class="text-slate-600 dark:text-slate-300 text-xs sm:text-sm leading-relaxed text-justify space-y-3">
+            <p>طراحی مطالعه بدون داشتن یک سیستم هوشمند و یکپارچه تندخوانی، در پروژه‌های بزرگ علمی و تحصیلی منجر به سردرگمی، کاهش تمرکز و عدم هماهنگی در ثبت اطلاعات خواهد شد.</p>
+            <p>تمام تمرین‌ها بر اساس استانداردهای روز علوم اعصاب جهان و متد تخصصی آکادمی کتابدانه بوده و شما در انتهای دوره مهارتی فوق‌العاده برای ارتقای سرعت مطالعه با درک مطلب بالای ۸۵٪ خواهید داشت.</p>
+          </div>
+        </div>
+
+        <!-- FAQs Section -->
+        <div class="space-y-4 pt-2">
+          <h2 class="text-xl font-bold text-slate-900 dark:text-white">سوالات متداول دوره تندخوانی</h2>
+          <div class="hui-card" style="padding: 0;">
+            <div class="hui-accordion">
+              <div class="hui-accordion__item">
+                <button class="hui-accordion__trigger" aria-expanded="false">
+                  <span>آیا تندخوانی باعث کاهش درک مطلب می‌شود؟</span>
+                  <svg class="hui-accordion__indicator" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                </button>
+                <div class="hui-accordion__panel" style="height: 0;">
+                  <div class="hui-accordion__body">خیر! در متد علمی کتابدانه، به دلیل افزایش تمرکز و درگیر شدن کامل نیمکره‌های مغز، درک مطلب نه‌تنها کاهش نمی‌یابد، بلکه از ۳۵٪ به بیش از ۸۵٪ ارتقا پیدا می‌کند.</div>
+                </div>
+              </div>
+              <hr class="hui-separator">
+              <div class="hui-accordion__item">
+                <button class="hui-accordion__trigger" aria-expanded="false">
+                  <span>این دوره برای چه افرادی مناسب است؟</span>
+                  <svg class="hui-accordion__indicator" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                </button>
+                <div class="hui-accordion__panel" style="height: 0;">
+                  <div class="hui-accordion__body">این دوره برای کلیه دانش‌آموزان، داوطلبان کنکور و آزمون‌های استخدامی، دانشجویان، وکلا، پزشکان، مدیران و تمامی علاقه‌مندان به مطالعه و یادگیری سریع طراحی شده است.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- LEFT COLUMN: Sticky Course Card using HeroUI Card & Buttons -->
+      <div class="lg:col-span-5 xl:col-span-4 lg:sticky lg:top-24">
+        <div class="hui-card space-y-6 shadow-xl">
+          
+          <div class="relative rounded-2xl overflow-hidden aspect-video shadow-sm border border-slate-200 dark:border-slate-800">
+            <img src="https://images.unsplash.com/photo-1457369804613-52c61a468e7d?auto=format&fit=crop&q=80&w=800" alt="دوره تندخوانی" class="w-full h-full object-cover">
+          </div>
+
+          <div class="space-y-4 divide-y divide-slate-100 dark:divide-slate-800 text-xs sm:text-sm">
+            <div class="flex items-center justify-between pt-2">
+              <span class="text-slate-500">مدت زمان دوره</span>
+              <span class="text-slate-900 dark:text-white font-semibold">۴۸ ساعت ویدیو HD</span>
+            </div>
+            <div class="flex items-center justify-between pt-3.5">
+              <span class="text-slate-500">تعداد جلسات</span>
+              <span class="text-slate-900 dark:text-white font-semibold">۶۵ جلسه آموزشی</span>
+            </div>
+            <div class="flex items-center justify-between pt-3.5">
+              <span class="text-slate-500">سطح آموزش</span>
+              <span class="text-slate-900 dark:text-white font-semibold">مقدماتی تا پیشرفته</span>
+            </div>
+            <div class="flex items-center justify-between pt-3.5">
+              <span class="text-slate-500">پشتیبانی</span>
+              <span class="text-slate-900 dark:text-white font-semibold">مستقیم توسط مدرس</span>
+            </div>
+          </div>
+
+          <button id="open-reg-btn" class="hui-btn hui-btn--primary hui-btn--lg hui-btn--full">
+            <span>ثبت‌نام و شروع یادگیری</span>
+          </button>
+
+          <div class="text-[11px] text-slate-500 text-center">
+            ✓ ضمانت ۱۰۰٪ یادگیری با متد علمی کتابدانه
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- HeroUI Modal for Registration -->
+  <div class="hui-modal-backdrop" id="registration-modal">
+    <div class="hui-modal-container">
+      <div class="hui-modal" style="max-width: 28rem;">
+        <div class="hui-modal__header">
+          <h3 class="text-xl font-bold text-slate-900 dark:text-white">ثبت‌نام و دریافت مشاوره رایگان</h3>
+        </div>
+        <div class="hui-modal__body">
+          <p class="text-slate-500 text-xs mb-4">اطلاعات خود را وارد کنید تا کارشناسان آکادمی با شما تماس بگیرند.</p>
+
+          <form id="modal-reg-form" class="space-y-4">
+            <div>
+              <label class="hui-label hui-label--required mb-1">نام و نام خانوادگی</label>
+              <input type="text" id="reg-name" required placeholder="مثال: علی محمدی" class="hui-input hui-input--full">
+            </div>
+            <div>
+              <label class="hui-label hui-label--required mb-1">شماره همراه</label>
+              <input type="tel" id="reg-phone" required dir="ltr" placeholder="09123456789" class="hui-input hui-input--full text-right">
+            </div>
+            <div class="pt-2 flex justify-end gap-2">
+              <button type="button" class="hui-btn hui-btn--ghost" id="close-modal-btn">انصراف</button>
+              <button type="submit" class="hui-btn hui-btn--primary">ارسال درخواست</button>
+            </div>
+          </form>
+        </div>
+        <button class="hui-close-btn hui-modal__close" id="close-modal-x" aria-label="Close">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Region -->
+  <div class="hui-toast-region hui-toast-region--bottom-end" id="toast-region"></div>
+
+  <!-- Footer -->
+  <footer class="bg-slate-950 text-slate-400 pt-12 pb-8 border-t-2 border-t-indigo-600 border-slate-800 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 pb-10 border-b border-slate-800">
+        
+        <div class="lg:col-span-2 space-y-3">
+          <div class="flex items-center text-white font-extrabold text-lg">
+            <img src="assets/logo-white.svg" alt="آکادمی ذهن آزاد" class="h-9 w-auto object-contain" />
+          </div>
+          <p class="text-slate-400 text-xs leading-relaxed max-w-sm">
+            مرکز تخصصی آموزش مهارت‌های تندخوانی، تقویت حافظه و راهبردهای یادگیری موثر بر پایه متدهای علمی.
+          </p>
+        </div>
+
+        <div class="space-y-3">
+          <h4 class="text-white font-semibold text-xs">دوره و خدمات</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="speed-reading.html" class="hover:text-white transition-colors">تندخوانی و درک مطلب</a></li>
+            <li><a href="public-speaking.html" class="hover:text-white transition-colors">فن بیان و سخنوری</a></li>
+            <li><a href="contact.html" class="hover:text-white transition-colors">دریافت مشاوره</a></li>
+          </ul>
+        </div>
+
+        <div class="space-y-3">
+          <h4 class="text-white font-semibold text-xs">دسترسی سریع</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="index.html" class="hover:text-white transition-colors">صفحه اصلی</a></li>
+            <li><a href="blog.html" class="hover:text-white transition-colors">مجله آموزشی</a></li>
+            <li><a href="about.html" class="hover:text-white transition-colors">درباره ما</a></li>
+            <li><a href="contact.html" class="hover:text-white transition-colors">تماس با ما</a></li>
+          </ul>
+        </div>
+
+        <div class="space-y-3">
+          <h4 class="text-white font-semibold text-xs">ارتباط با ما</h4>
+          <div class="space-y-2 text-xs">
+            <div>تلفن: <span class="dir-ltr text-right inline-block">۰۲۱-۸۸۹۹۰۰۱۱</span></div>
+            <div>ایمیل: info@zehenbartar.ir</div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="pt-6 flex flex-col md:flex-row items-center justify-between text-[11px] text-slate-500 gap-4">
+        <p>© ۱۴۰۴ آکادمی ذهن آزاد. تمامی حقوق محفوظ است.</p>
+        <div class="flex items-center gap-4">
+          <a href="privacy.html" class="hover:text-slate-300 transition-colors">حریم خصوصی</a>
+          <a href="terms.html" class="hover:text-slate-300 transition-colors">قوانین و مقررات</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- HeroUI Pure JS & Main JS -->
+  <script src="js/heroui.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    // Theme toggle
+    const themeToggle = new HeroUI.ThemeToggle();
+    document.getElementById('theme-toggle').addEventListener('click', () => themeToggle.toggle());
+
+    // Mobile Drawer
+    const drawerEl = document.getElementById('mobile-drawer');
+    const drawerInstance = new HeroUI.Drawer(drawerEl);
+    document.getElementById('mobile-menu-btn').addEventListener('click', () => drawerInstance.open());
+
+    // Registration Modal
+    const regModalEl = document.getElementById('registration-modal');
+    const regModalInstance = new HeroUI.Modal(regModalEl);
+    document.getElementById('open-reg-btn').addEventListener('click', () => regModalInstance.open());
+    document.getElementById('close-modal-btn').addEventListener('click', () => regModalInstance.close());
+    document.getElementById('close-modal-x').addEventListener('click', () => regModalInstance.close());
+
+    // Toast & Form Submission
+    const toaster = new HeroUI.Toast('#toast-region');
+    document.getElementById('modal-reg-form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      regModalInstance.close();
+      toaster.show({ title: 'درخواست ثبت شد', description: 'کارشناسان ما به زودی با شما تماس خواهند گرفت.', variant: 'success' });
+    });
+  </script>
+</body>
+</html>

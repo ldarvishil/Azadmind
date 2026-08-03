@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>سیاست حریم خصوصی | آکادمی ذهن آزاد</title>
+  <meta name="description" content="سیاست‌های حفظ حریم شخصی و اطلاعات کاربران در آکادمی ذهن آزاد">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- HeroUI Pure CSS & Project Style -->
+  <link rel="stylesheet" href="css/heroui.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-indigo-500 selection:text-white flex flex-col min-h-screen">
+
+  <header class="sticky top-0 z-50 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="relative flex items-center justify-between h-16">
+        <div class="flex items-center gap-3">
+          <a href="index.html" class="flex items-center group py-1" aria-label="آکادمی ذهن آزاد">
+            <img src="assets/logo.svg" alt="آکادمی ذهن آزاد" class="h-9 w-auto object-contain transition-transform group-hover:scale-105" />
+          </a>
+          <span class="hui-badge hui-badge--accent hidden sm:inline-flex">HeroUI</span>
+        </div>
+        <nav class="hidden lg:flex items-center justify-center gap-1 font-medium text-xs text-slate-600 dark:text-slate-300 absolute left-1/2 -translate-x-1/2">
+          <a href="index.html" class="px-3 py-1.5 rounded-md hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">صفحه اصلی</a>
+          <a href="speed-reading.html" class="px-3 py-1.5 rounded-md hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">تندخوانی</a>
+          <a href="public-speaking.html" class="px-3 py-1.5 rounded-md hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">فن بیان</a>
+          <a href="blog.html" class="px-3 py-1.5 rounded-md hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">مجله آموزشی</a>
+          <a href="about.html" class="px-3 py-1.5 rounded-md hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">درباره ما</a>
+          <a href="contact.html" class="px-3 py-1.5 rounded-md hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">تماس با ما</a>
+        </nav>
+        <div class="flex items-center gap-2">
+          <button id="theme-toggle" class="hui-close-btn" style="width: 2.1rem; height: 2.1rem;" title="تغییر تم">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-5.4-5.4c0-1.81 .89-3.42 2.26-4.4C12.92 3.04 12.46 3 12 3z"/></svg>
+          </button>
+          <button id="mobile-menu-btn" class="lg:hidden p-2 text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="hui-drawer-backdrop hui-drawer-backdrop--opaque" id="mobile-drawer">
+    <div class="hui-drawer-content hui-drawer-content--right">
+      <div class="hui-drawer" style="width: 18rem;">
+        <div class="hui-drawer__header">
+          <div class="flex items-center justify-between">
+            <h3 class="hui-drawer__heading">منوی آکادمی</h3>
+            <button class="hui-close-btn hui-drawer__close" aria-label="Close">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+            </button>
+          </div>
+        </div>
+        <div class="hui-drawer__body" style="padding-top: 1rem;">
+          <div class="hui-dropdown-menu">
+            <a href="index.html" class="hui-menu-item">صفحه اصلی</a>
+            <a href="speed-reading.html" class="hui-menu-item">دوره تندخوانی</a>
+            <a href="public-speaking.html" class="hui-menu-item">دوره فن بیان</a>
+            <a href="blog.html" class="hui-menu-item">مجله آموزشی</a>
+            <a href="about.html" class="hui-menu-item">درباره ما</a>
+            <a href="contact.html" class="hui-menu-item">تماس با ما</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main class="flex-grow max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
+    
+    <nav class="hui-breadcrumbs" aria-label="Breadcrumb">
+      <span class="hui-breadcrumbs__item">
+        <a class="hui-breadcrumbs__link" href="index.html">صفحه اصلی</a>
+        <svg class="hui-breadcrumbs__separator" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg>
+      </span>
+      <span class="hui-breadcrumbs__item">
+        <a class="hui-breadcrumbs__link is-current" aria-current="page" href="#">حریم خصوصی</a>
+      </span>
+    </nav>
+
+    <div class="hui-card space-y-6">
+      <h1 class="text-2xl font-bold text-slate-900 dark:text-white">سیاست حریم خصوصی</h1>
+      <p class="text-slate-600 dark:text-slate-300 text-xs sm:text-sm leading-relaxed">
+        آکادمی ذهن آزاد متعهد به حفظ حریم شخصی و اطلاعات کاربران خود است. اطلاعات دریافتی شامل شماره همراه و نام و نام خانوادگی، صرفاً جهت ارتباط، ثبت‌نام در دوره‌ها و ارائه خدمات آموزشی استفاده خواهد شد و تحت هیچ شرایطی در اختیار اشخاص ثالث قرار نخواهد گرفت.
+      </p>
+
+      <hr class="hui-separator">
+
+      <div class="space-y-4">
+        <h2 class="text-base font-bold text-slate-800 dark:text-slate-200">حفاظت از اطلاعات</h2>
+        <p class="text-slate-600 dark:text-slate-300 text-xs sm:text-sm leading-relaxed">
+          تمامی داده‌های کاربران بر روی بسترهای امن ذخیره‌سازی شده و دسترسی به آن‌ها محدود به تیم پشتیبانی آکادمی است.
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-slate-950 text-slate-400 pt-12 pb-8 border-t-2 border-t-indigo-600 border-slate-800 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 pb-10 border-b border-slate-800">
+        
+        <div class="lg:col-span-2 space-y-3">
+          <div class="flex items-center text-white font-extrabold text-lg">
+            <img src="assets/logo-white.svg" alt="آکادمی ذهن آزاد" class="h-9 w-auto object-contain" />
+          </div>
+          <p class="text-slate-400 text-xs leading-relaxed max-w-sm">
+            مرکز تخصصی آموزش مهارت‌های تندخوانی، تقویت حافظه و راهبردهای یادگیری موثر بر پایه متدهای علمی.
+          </p>
+        </div>
+
+        <div class="space-y-3">
+          <h4 class="text-white font-semibold text-xs">دوره و خدمات</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="speed-reading.html" class="hover:text-white transition-colors">تندخوانی و درک مطلب</a></li>
+            <li><a href="public-speaking.html" class="hover:text-white transition-colors">فن بیان و سخنوری</a></li>
+            <li><a href="contact.html" class="hover:text-white transition-colors">دریافت مشاوره</a></li>
+          </ul>
+        </div>
+
+        <div class="space-y-3">
+          <h4 class="text-white font-semibold text-xs">دسترسی سریع</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="index.html" class="hover:text-white transition-colors">صفحه اصلی</a></li>
+            <li><a href="blog.html" class="hover:text-white transition-colors">مجله آموزشی</a></li>
+            <li><a href="about.html" class="hover:text-white transition-colors">درباره ما</a></li>
+            <li><a href="contact.html" class="hover:text-white transition-colors">تماس با ما</a></li>
+          </ul>
+        </div>
+
+        <div class="space-y-3">
+          <h4 class="text-white font-semibold text-xs">ارتباط با ما</h4>
+          <div class="space-y-2 text-xs">
+            <div>تلفن: <span class="dir-ltr text-right inline-block">۰۲۱-۸۸۹۹۰۰۱۱</span></div>
+            <div>ایمیل: info@zehenbartar.ir</div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="pt-6 flex flex-col md:flex-row items-center justify-between text-[11px] text-slate-500 gap-4">
+        <p>© ۱۴۰۴ آکادمی ذهن آزاد. تمامی حقوق محفوظ است.</p>
+        <div class="flex items-center gap-4">
+          <a href="privacy.html" class="hover:text-slate-300 transition-colors">حریم خصوصی</a>
+          <a href="terms.html" class="hover:text-slate-300 transition-colors">قوانین و مقررات</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- HeroUI Pure JS & Main JS -->
+  <script src="js/heroui.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    // Theme toggle
+    const themeToggle = new HeroUI.ThemeToggle();
+    document.getElementById('theme-toggle').addEventListener('click', () => themeToggle.toggle());
+
+    // Mobile Drawer
+    const drawerEl = document.getElementById('mobile-drawer');
+    const drawerInstance = new HeroUI.Drawer(drawerEl);
+    document.getElementById('mobile-menu-btn').addEventListener('click', () => drawerInstance.open());
+  </script>
+</body>
+</html>
